@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: '민간수사단 “찾는다” | Team FIND',
+  title: '민간수사단 “찾는다”',
   description: '공개된 파편 속에서 진실을 구성하는 시민 수사 프로젝트. 창립 멤버를 모집합니다.',
   generator: 'v0.app',
   icons: {

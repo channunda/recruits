@@ -22,9 +22,9 @@ const kakaoUrl = 'https://open.kakao.com/o/piq4pCUi'
 const navItems = [
   ['소개', 'intro'],
   ['운영원칙', 'principles'],
-  ['수사방식', 'process'],
+  ['활동 방식', 'process'],
   ['모집대상', 'recruit'],
-  ['수사 함께하기', 'join'],
+  ['함께하기', 'join'],
 ]
 
 const qualifications = [
@@ -32,13 +32,13 @@ const qualifications = [
   '추리, 미스터리, 수사극 장르의 구조를 분석하고 기록하는 것을 즐기는 분',
   '흩어진 기사, 영상, 공공 기록을 체계적으로 수집하고 정리하는 데 집요함이 있는 분',
   '철저한 윤리 의식과 책임감을 바탕으로 비밀유지 및 가이드라인을 준수할 수 있는 분',
-  '매주 최소 3시간 이상 팀원들과 원활하게 소통하며 조사에 참여할 수 있는 분',
+  '주 3시간 내외로 팀원들과 원활하게 소통하며 조사에 참여할 수 있는 분',
 ]
 
 const processSteps = [
-  { number: '01', title: '4인 1조 팀 매칭', body: '1개 사건당 4명의 연구원·수사원으로 팀을 구성합니다.', icon: Users },
-  { number: '02', title: '주 3시간 OSINT 분석', body: '언론 보도, 판결문, 공공 기록 등 공개 데이터(OSINT)를 수집 및 구조화합니다.', icon: FileSearch },
-  { number: '03', title: '유의미한 수사자료 제출', body: '정밀 분석으로 도출한 의문점과 데이터 보고서를 경찰 및 관련 기관에 공식 제보합니다.', icon: Gavel },
+  { number: '01', title: '4인 1조 팀 매칭', body: '1개 사건당 4명의 연구원으로 팀을 구성합니다.', icon: Users },
+  { number: '02', title: '주 3시간 내외 OSINT 분석', body: '언론 보도, 판결문, 공공 기록 등 공개 데이터(OSINT)를 수집 및 구조화합니다.', icon: FileSearch },
+  { number: '03', title: '의미 있는 증거는 공식 제보', body: '정밀 분석으로 의미 있는 증거가 나오면, 의문점과 데이터 보고서를 경찰 및 관련 기관에 제보합니다.', icon: Gavel },
 ]
 
 function Mark() {
@@ -74,8 +74,8 @@ export default function Page() {
         <div className="hero-copy">
           <motion.p className="eyebrow" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .6 }}>CIVIC INVESTIGATION UNIT / EST. 2026</motion.p>
           <motion.h1 initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .1, duration: .7 }}>공개된 파편 속에서 <em>진실을 구성합니다</em></motion.h1>
-          <motion.p className="hero-desc" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .25, duration: .7 }}>경찰과 협력하여 더 안전한 사회를 만드는 시민 수사 프로젝트.<br className="desktop-only" /> 창립 멤버를 모집합니다.</motion.p>
-          <motion.a className="red-button" href={kakaoUrl} target="_blank" rel="noopener noreferrer" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .4, duration: .7 }}>수사 함께하기 <ArrowUpRight size={16} /></motion.a>
+          <motion.p className="hero-desc" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .25, duration: .7 }}>시민의 눈으로 사건을 들여다보고, 의미 있는 증거는 경찰에 제보합니다.<br className="desktop-only" /> 창립 멤버를 모집합니다.</motion.p>
+          <motion.a className="red-button" href={kakaoUrl} target="_blank" rel="noopener noreferrer" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .4, duration: .7 }}>함께하기 <ArrowUpRight size={16} /></motion.a>
         </div>
         <div className="hero-visual" role="img" aria-label="어두운 증거 보드와 기록물을 살피는 포렌식 조사 장면"><div className="hero-image" /><div className="visual-label">CASE FILE / OPEN SOURCE<br /><span>TRUTH IS IN THE DETAILS</span></div><div className="visual-line" /></div>
         <div className="hero-index">01 <span>/</span> 05</div>
@@ -90,14 +90,14 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="process" className="process content-section section-grid"><div className="section-heading"><p className="eyebrow">02 / THE METHOD</p><h2>네 명의 시선으로<br /><em>하나의 사건을 봅니다.</em></h2><p className="section-intro">감정이 아닌 기록으로, 추측이 아닌 검증으로. 팀 단위 OSINT 수사가 작동하는 방식입니다.</p></div><div className="process-list">{processSteps.map(({ number, title, body, icon: Icon }, i) => <motion.article key={number} className="process-step" initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * .12 }}><div className="step-number">{number}</div><div className="step-icon"><Icon /></div><div><h3>{title}</h3><p>{body}</p></div></motion.article>)}</div></section>
+      <section id="process" className="process content-section section-grid"><div className="section-heading"><p className="eyebrow">02 / THE METHOD</p><h2>네 명의 시선으로<br /><em>하나의 사건을 봅니다.</em></h2><p className="section-intro">감정이 아닌 기록으로, 추측이 아닌 검증으로. 팀 단위 OSINT 수사가 작동하는 방식입니다.</p><p>OSINT(공개출처정보)는 누구나 합법적으로 접근할 수 있는 자료만 사용하는 조사 방식입니다. 우리는 공개 자료만 사용하고, 누구와도 직접 접촉하지 않으며, 당분간 온라인으로만 활동합니다.</p></div><div className="process-list">{processSteps.map(({ number, title, body, icon: Icon }, i) => <motion.article key={number} className="process-step" initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * .12 }}><div className="step-number">{number}</div><div className="step-icon"><Icon /></div><div><h3>{title}</h3><p>{body}</p></div></motion.article>)}</div></section>
 
       <section id="recruit" className="recruit content-section"><div className="recruit-image" role="img" aria-label="어두운 수사 기록 보관소의 사건 파일" /><div className="recruit-copy"><p className="eyebrow">03 / WHO WE NEED</p><h2>이런 분을<br /><em>기다립니다.</em></h2><ul>{qualifications.map((item) => <li key={item}><Check size={16} /><span>{item}</span></li>)}</ul></div></section>
 
-      <section className="schedule content-section"><div><p className="eyebrow">04 / FIELD NOTES</p><h2>꾸준함이 만드는<br /><em>새로운 단서</em></h2></div><div className="schedule-grid"><div><Timer /><span>활동 시간</span><strong>매주 3시간</strong><p>온라인 자율 및 팀별 협의</p></div><div><Users /><span>운영 방식</span><strong>창립 멤버 단계</strong><p>수사단 구성원과 함께 세부 운영 규칙 및 첫 사건 선정을 정립합니다.</p></div></div></section>
+      <section className="schedule content-section"><div><p className="eyebrow">04 / FIELD NOTES</p><h2>꾸준함이 만드는<br /><em>새로운 단서</em></h2></div><div className="schedule-grid"><div><Timer /><span>활동 시간</span><strong>주 3시간 내외</strong><p>온라인 자율 및 팀별 협의</p></div><div><Users /><span>운영 방식</span><strong>창립 멤버 단계</strong><p>수사단 구성원과 함께 세부 운영 규칙 및 첫 사건 선정을 정립합니다. 첫 한 달은 연습 사건으로 호흡을 맞춥니다.</p></div></div></section>
 
-      <section id="join" className="final-cta"><p className="eyebrow">05 / JOIN THE INVESTIGATION</p><h2>진실을 향한 첫 걸음,<br /><em>당신의 눈과 기록이 필요합니다.</em></h2><a className="red-button large" href={kakaoUrl} target="_blank" rel="noopener noreferrer">카카오톡 오픈채팅 입장하기 <ArrowUpRight size={18} /></a></section>
-      <footer><a href="#intro" className="brand"><Mark /><span><b>민간수사단</b> <strong>“찾는다”</strong></span></a><p>© 2026 민간수사단 찾는다. All rights reserved.</p><span className="footer-code">FIND / 2026</span></footer>
+      <section id="join" className="final-cta"><p className="eyebrow">05 / JOIN THE INVESTIGATION</p><h2>진실을 향한 첫 걸음,<br /><em>당신의 눈과 기록이 필요합니다.</em></h2><a className="red-button large" href={kakaoUrl} target="_blank" rel="noopener noreferrer">카카오톡 오픈채팅 입장하기 <ArrowUpRight size={18} /></a><p>오픈채팅에서는 실명 대신 활동명 사용을 권장합니다.</p></section>
+      <footer><a href="#intro" className="brand"><Mark /><span><b>민간수사단</b> <strong>“찾는다”</strong></span></a><p>© 2026 민간수사단 찾는다. All rights reserved.</p><span className="footer-code">찾는다 / 2026</span></footer>
     </main>
   )
 }
