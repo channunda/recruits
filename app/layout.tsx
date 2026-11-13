@@ -4,7 +4,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: '민간수사단 “찾는다”',
-  description: '공개된 파편 속에서 진실을 구성하는 시민 수사 프로젝트. 창립 멤버를 모집합니다.',
+  description: '시민이 공개 자료로 사건을 들여다보는 프로젝트. 2026년 11월 16일부터 30일까지 창립 멤버 4명을 선착순으로 모집합니다.',
   generator: 'v0.app',
   icons: {
     icon: [
