@@ -27,11 +27,12 @@ const navItems = [
   ['운영원칙', 'principles'],
   ['모집대상', 'recruit'],
   ['일정', 'schedule'],
+  ['지원안내', 'apply'],
   ['지원하기', APPLY_FORM_URL],
 ]
 
 const qualifications = [
-  '매주 《그것이 알고 싶다》, 《PD수첩》 등 범죄·시민 수사 다큐멘터리를 깊이 있게 시청하시는 분',
+  '《그것이 알고 싶다》, 《PD수첩》 등 범죄·시민 수사 다큐멘터리를 깊이 있게 시청하시는 분',
   '추리, 미스터리, 수사극 장르의 구조를 분석하고 기록하는 것을 즐기는 분',
   '흩어진 기사, 영상, 공공 기록을 체계적으로 수집하고 정리하는 데 집요함이 있는 분',
   '철저한 윤리 의식과 책임감을 바탕으로 비밀유지 및 가이드라인을 준수할 수 있는 분',
@@ -83,13 +84,17 @@ export default function Page() {
           <p className="eyebrow hero-recruitment-note">2026.11.16 – 11.30 모집 · 정원 4명 · 12.1 출범</p>
         </div>
         <div className="hero-visual" role="img" aria-label="어두운 증거 보드와 기록물을 살피는 포렌식 조사 장면"><div className="hero-image" /><div className="visual-label">CASE FILE / OPEN SOURCE<br /><span>TRUTH IS IN THE DETAILS</span></div><div className="visual-line" /></div>
-        <div className="hero-index">01 <span>/</span> 06</div>
+        <div className="hero-index">01 <span>/</span> 07</div>
         <a className="scroll-cue" href="#why">SCROLL TO INVESTIGATE <ChevronDown size={15} /></a>
       </section>
 
       <section id="why" className="why content-section section-grid">
-        <div className="section-heading"><p className="eyebrow">01 / WHY WE START</p><h2>화면 속에서 멈추지 않고,<br /><em>직접 찾아보기로 했습니다.</em></h2></div>
-        <p className="section-intro why-copy">실종아동의 현재 모습을 AI로 추정하는 프로젝트를 만들다가 생각했습니다. 화면 속 이미지를 만드는 데서 멈추지 말고, 우리가 직접 찾아보면 어떨까. ‘찾는다’는 거기서 시작했습니다. 사람을 찾는 일이기도, 사건을 다시 찾아보는 일이기도 합니다.</p>
+        <div className="section-heading"><p className="eyebrow">01 / WHY WE START</p><h2>의미 있는 결과를 위해,<br /><em>직접 찾아보기로 했습니다.</em></h2></div>
+        <div className="section-intro why-copy">
+          <p>실종아동의 현재 모습을 AI로 추정하는 프로젝트를 만들면서 생각했습니다. 이미지를 만드는 데서 그치지 않고, 실제로 의미 있는 결과로 이어지게 할 수는 없을까.</p>
+          <p>그때 떠오른 것이 넷플릭스 다큐 「고양이는 건드리지 마라」였습니다. 평범한 시민들이 공개된 단서를 모아 범죄자를 추적하는 모습을 보며, 한국에서도 민간이 할 수 있는 일이 있기를 바랐습니다. 이 작품은 잘못된 추적이 낳는 위험도 함께 보여주었기에, 우리는 활동 방식과 원칙을 먼저 세웠습니다.</p>
+          <p className="why-conclusion">‘찾는다’는 거기서 시작했습니다. 사람을 찾는 일이기도, 사건이 납득될 수 있도록 다시 찾아보는 일이기도 합니다.</p>
+        </div>
       </section>
 
       <section id="process" className="process content-section section-grid"><div className="section-heading"><p className="eyebrow">02 / THE METHOD</p><h2>네 명의 시선으로<br /><em>하나의 사건을 봅니다.</em></h2><p className="section-intro">감정이 아닌 기록으로, 추측이 아닌 검증으로. 팀 단위 OSINT 수사가 작동하는 방식입니다.</p><p className="section-intro">OSINT(공개출처정보)는 누구나 합법적으로 접근할 수 있는 자료만 사용하는 조사 방식입니다. 우리는 공개 자료만 사용하고, 누구와도 직접 접촉하지 않으며, 당분간 온라인으로만 활동합니다.</p></div><div className="process-list">{processSteps.map(({ number, title, body, icon: Icon }, i) => <motion.article key={number} className="process-step" initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * .12 }}><div className="step-number">{number}</div><div className="step-icon"><Icon /></div><div><h3>{title}</h3><p>{body}</p></div></motion.article>)}</div></section>
@@ -107,18 +112,15 @@ export default function Page() {
       <section id="schedule" className="schedule content-section recruitment-schedule">
         <div>
           <p className="eyebrow">05 / SCHEDULE</p>
-          <h2>모집 일정과<br /><em>지원 안내</em></h2>
+          <h2>모집부터 출범까지,<br /><em>그리고 첫 한 달.</em></h2>
         </div>
         <div>
-          <div className="schedule-grid operating-mode-grid"><div><Timer /><span className="eyebrow">활동 시간</span><strong>주 3시간 내외</strong><p>온라인 자율 및 팀별 협의</p></div><div><Users /><span className="eyebrow">운영 방식</span><strong>창립 멤버 단계</strong><p>수사단 구성원과 함께 세부 운영 규칙 및 첫 사건 선정을 정립합니다. 첫 한 달은 연습 사건으로 호흡을 맞춥니다.</p></div></div>
+          <div className="schedule-grid operating-mode-grid"><div><Timer /><span className="eyebrow">활동 시간</span><strong>주 3시간 내외</strong><p>온라인 자율 및 팀별 협의</p></div><div><Users /><span className="eyebrow">운영 방식</span><strong>창립 멤버 단계</strong><p>수사단 구성원과 함께 세부 운영 규칙 및 첫 사건 선정을 정립합니다. 첫 한 달은 연습 사건으로 호흡을 맞춥니다.</p></div><div><span className="eyebrow">운영진</span><p>사건 팀에는 속하지 않고 관리 인력으로 참여하며, 사건 착수 승인, 중단 판단, 외부 제출 승인을 맡습니다.</p></div></div>
           <p className="eyebrow schedule-subheading">모집 안내</p>
           <div className="schedule-grid">
             <div><span className="eyebrow">모집 기간</span><strong>2026년 11월 16일(월) – 11월 30일(월)</strong></div>
             <div><span className="eyebrow">모집 정원</span><strong>4명</strong></div>
-            <div><span className="eyebrow">지원 방법</span><p>지원서(구글폼)를 제출해 주세요. 문의는 카카오톡 오픈채팅에서 받습니다.</p></div>
-            <div><span className="eyebrow">인터뷰</span><p>지원서 제출 순서대로 한 분 한 분 개별 연락드려 진행합니다. 4명이 확정되면 모집을 마감합니다.</p></div>
             <div><span className="eyebrow">출범</span><strong>2026년 12월 1일(화)</strong></div>
-            <div><span className="eyebrow">운영진</span><p>사건 팀에는 속하지 않고 관리 인력으로 참여하며, 사건 착수 승인, 중단 판단, 외부 제출 승인을 맡습니다.</p></div>
           </div>
           <p className="eyebrow plan-subheading">12월 활동 계획 (예시)</p>
           <div className="schedule-grid">
@@ -132,7 +134,20 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="join" className="final-cta"><p className="eyebrow">06 / JOIN THE INVESTIGATION</p><h2>진실을 향한 첫 걸음,<br /><em>당신의 눈과 기록이 필요합니다.</em></h2><p className="eyebrow">2026.11.16 – 11.30 · 모집 정원 4명</p><div className="join-actions"><a className="red-button large" href={APPLY_FORM_URL} target="_blank" rel="noopener noreferrer">지원서 작성하기 <ArrowUpRight size={18} /></a><a className="red-button large" href={KAKAO_URL} target="_blank" rel="noopener noreferrer">문의하기 (오픈채팅) <ArrowUpRight size={18} /></a></div><p className="section-intro join-guidance">오픈채팅은 문의만 받으며 사건에 대한 이야기는 하지 않습니다. 실명 대신 활동명 사용을 권장합니다.</p><p className="section-intro privacy-note">지원서에는 활동명, 연락 수단, 활동 가능 시간, 지원 동기를 받으며, 모집이 끝나면 선발되지 않은 분의 정보는 파기합니다.</p></section>
+      <section id="apply" className="schedule content-section application-section">
+        <div>
+          <p className="eyebrow">06 / HOW TO APPLY</p>
+          <h2>이렇게<br /><em>지원합니다.</em></h2>
+        </div>
+        <div className="schedule-grid application-grid">
+          <div><span className="eyebrow">지원 방법</span><p>지원서(구글폼)를 제출해 주세요. 문의는 카카오톡 오픈채팅에서 받습니다.</p></div>
+          <div><span className="eyebrow">인터뷰</span><p>지원서 제출 순서대로 한 분 한 분 개별 연락드려 진행합니다. 4명이 확정되면 모집을 마감합니다.</p></div>
+          <div><span className="eyebrow">문의</span><p>오픈채팅은 문의만 받으며 사건에 대한 이야기는 하지 않습니다. 실명 대신 활동명 사용을 권장합니다.</p></div>
+          <div><span className="eyebrow">개인정보 안내</span><p>지원서에는 활동명, 연락처, 성인 여부 응답, 활동 가능 시간, 지원 동기를 받으며, 모집이 끝나면 선발되지 않은 분의 정보는 파기합니다.</p></div>
+        </div>
+      </section>
+
+      <section id="join" className="final-cta"><p className="eyebrow">07 / JOIN THE INVESTIGATION</p><h2>진실을 향한 첫 걸음,<br /><em>당신의 눈과 기록이 필요합니다.</em></h2><p className="eyebrow">2026.11.16 – 11.30 · 모집 정원 4명</p><div className="join-actions"><a className="red-button large" href={APPLY_FORM_URL} target="_blank" rel="noopener noreferrer">지원서 작성하기 <ArrowUpRight size={18} /></a><a className="red-button large" href={KAKAO_URL} target="_blank" rel="noopener noreferrer">문의하기 (오픈채팅) <ArrowUpRight size={18} /></a></div></section>
       <footer><a href="#intro" className="brand"><Mark /><span><b>민간수사단</b> <strong>“찾는다”</strong></span></a><p>© 2026 민간수사단 찾는다. All rights reserved.</p><span className="footer-code">찾는다 / 2026</span></footer>
     </main>
   )
