@@ -25,9 +25,9 @@ const navItems = [
   ['시작한 이유', 'why'],
   ['활동 방식', 'process'],
   ['운영원칙', 'principles'],
+  ['활동계획', 'activity'],
   ['모집대상', 'recruit'],
-  ['일정', 'schedule'],
-  ['지원안내', 'apply'],
+  ['모집안내', 'apply'],
   ['지원하기', APPLY_FORM_URL],
 ]
 
@@ -92,8 +92,7 @@ export default function Page() {
         <div className="section-heading"><p className="eyebrow">01 / WHY WE START</p><h2>의미 있는 결과를 위해,<br /><em>직접 찾아보기로 했습니다.</em></h2></div>
         <div className="section-intro why-copy">
           <p>실종아동의 현재 모습을 AI로 추정하는 프로젝트를 만들면서 생각했습니다. 이미지를 만드는 데서 그치지 않고, 실제로 의미 있는 결과로 이어지게 할 수는 없을까.</p>
-          <p>그때 떠오른 것이 넷플릭스 다큐 「고양이는 건드리지 마라」였습니다. 평범한 시민들이 공개된 단서를 모아 범죄자를 추적하는 모습을 보며, 한국에서도 민간이 할 수 있는 일이 있기를 바랐습니다. 이 작품은 잘못된 추적이 낳는 위험도 함께 보여주었기에, 우리는 활동 방식과 원칙을 먼저 세웠습니다.</p>
-          <p className="why-conclusion">‘찾는다’는 거기서 시작했습니다. 사람을 찾는 일이기도, 사건이 납득될 수 있도록 다시 찾아보는 일이기도 합니다.</p>
+          <p>그때 떠오른 것이 넷플릭스 다큐 「고양이는 건드리지 마라」였습니다. 평범한 시민들이 공개된 단서를 모아 범죄자를 추적하는 모습을 보며, 한국에서도 민간이 할 수 있는 일이 있기를 바랐습니다. 이 작품은 잘못된 추적이 낳는 위험도 함께 보여주었기에 우리에게 좋은 참고자료가 됩니다.</p>
         </div>
       </section>
 
@@ -107,21 +106,13 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="recruit" className="recruit content-section"><div className="recruit-image" role="img" aria-label="어두운 수사 기록 보관소의 사건 파일" /><div className="recruit-copy"><p className="eyebrow">04 / WHO WE NEED</p><h2>이런 분을<br /><em>기다립니다.</em></h2><ul>{qualifications.map((item) => <li key={item}><Check size={16} /><span>{item}</span></li>)}</ul></div></section>
-
-      <section id="schedule" className="schedule content-section recruitment-schedule">
+      <section id="activity" className="schedule content-section activity-section">
         <div>
-          <p className="eyebrow">05 / SCHEDULE</p>
-          <h2>모집부터 출범까지,<br /><em>그리고 첫 한 달.</em></h2>
+          <p className="eyebrow">04 / ACTIVITY PLAN</p>
+          <h2>첫 한 달,<br /><em>이렇게 활동합니다.</em></h2>
         </div>
         <div>
-          <div className="schedule-grid operating-mode-grid"><div><Timer /><span className="eyebrow">활동 시간</span><strong>주 3시간 내외</strong><p>온라인 자율 및 팀별 협의</p></div><div><Users /><span className="eyebrow">운영 방식</span><strong>창립 멤버 단계</strong><p>수사단 구성원과 함께 세부 운영 규칙 및 첫 사건 선정을 정립합니다. 첫 한 달은 연습 사건으로 호흡을 맞춥니다.</p></div><div><span className="eyebrow">운영진</span><p>사건 팀에는 속하지 않고 관리 인력으로 참여하며, 사건 착수 승인, 중단 판단, 외부 제출 승인을 맡습니다.</p></div></div>
-          <p className="eyebrow schedule-subheading">모집 안내</p>
-          <div className="schedule-grid">
-            <div><span className="eyebrow">모집 기간</span><strong>2026년 11월 16일(월) – 11월 30일(월)</strong></div>
-            <div><span className="eyebrow">모집 정원</span><strong>4명</strong></div>
-            <div><span className="eyebrow">출범</span><strong>2026년 12월 1일(화)</strong></div>
-          </div>
+          <div className="schedule-grid operating-mode-grid"><div><Timer /><span className="eyebrow">활동 시간</span><strong>주 3시간 내외</strong><p>온라인 자율 및 팀별 협의</p></div><div><Users /><span className="eyebrow">운영 방식</span><strong>창립 멤버 단계</strong><p>수사단 구성원과 함께 세부 운영 규칙 및 첫 사건 선정을 정립합니다. 첫 한 달은 연습 사건으로 호흡을 맞춥니다.</p></div><div><span className="eyebrow">출범</span><strong>2026년 12월 1일(화)</strong></div></div>
           <p className="eyebrow plan-subheading">12월 활동 계획 (예시)</p>
           <div className="schedule-grid">
             <div><span className="eyebrow">12월 1주차 (12/1 – 12/6)</span><strong>킥오프</strong><p>원칙과 윤리 서약을 함께 읽고, 역할을 정하고, 연습 사건을 고릅니다.</p></div>
@@ -134,16 +125,20 @@ export default function Page() {
         </div>
       </section>
 
+      <section id="recruit" className="recruit content-section"><div className="recruit-image" role="img" aria-label="어두운 수사 기록 보관소의 사건 파일" /><div className="recruit-copy"><p className="eyebrow">05 / WHO WE NEED</p><h2>이런 분을<br /><em>기다립니다.</em></h2><ul>{qualifications.map((item) => <li key={item}><Check size={16} /><span>{item}</span></li>)}</ul></div></section>
+
       <section id="apply" className="schedule content-section application-section">
         <div>
           <p className="eyebrow">06 / HOW TO APPLY</p>
-          <h2>이렇게<br /><em>지원합니다.</em></h2>
+          <h2>함께할<br /><em>네 명을 모집합니다.</em></h2>
         </div>
         <div className="schedule-grid application-grid">
+          <div><span className="eyebrow">모집 기간</span><strong>2026년 11월 16일(월) – 11월 30일(월)</strong></div>
+          <div><span className="eyebrow">모집 정원</span><strong>4명</strong></div>
           <div><span className="eyebrow">지원 방법</span><p>지원서(구글폼)를 제출해 주세요. 문의는 카카오톡 오픈채팅에서 받습니다.</p></div>
           <div><span className="eyebrow">인터뷰</span><p>지원서 제출 순서대로 한 분 한 분 개별 연락드려 진행합니다. 4명이 확정되면 모집을 마감합니다.</p></div>
           <div><span className="eyebrow">문의</span><p>오픈채팅은 문의만 받으며 사건에 대한 이야기는 하지 않습니다. 실명 대신 활동명 사용을 권장합니다.</p></div>
-          <div><span className="eyebrow">개인정보 안내</span><p>지원서에는 활동명, 연락처, 성인 여부 응답, 활동 가능 시간, 지원 동기를 받으며, 모집이 끝나면 선발되지 않은 분의 정보는 파기합니다.</p></div>
+          <div><span className="eyebrow">개인정보 안내</span><p>지원서에는 활동명, 연락처, 성인 여부 응답, 활동 가능 시간(주 3시간 가능 여부, 선호 시간대, 12월 참여 가능 여부), 지원 동기를 받으며, 모집이 끝나면 선발되지 않은 분의 정보는 파기합니다.</p></div>
         </div>
       </section>
 
