@@ -78,7 +78,7 @@ export default function Page() {
         <div className="hero-copy">
           <motion.p className="eyebrow" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .6 }}>CIVIC INVESTIGATION UNIT / EST. 2026</motion.p>
           <motion.h1 initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .1, duration: .7 }}>공개된 파편 속에서 <em>진실을 구성합니다</em></motion.h1>
-          <motion.p className="hero-desc" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .25, duration: .7 }}>시민의 눈으로 사건을 들여다보고, 의미 있는 증거는 경찰에 제보합니다.<br className="desktop-only" /> 창립 멤버를 모집합니다.</motion.p>
+          <motion.p className="hero-desc" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .25, duration: .7 }}>시민의 눈으로 사건을 들여다보고,<br />의미 있는 증거는 경찰에 제보합니다.<br />창립 멤버를 모집합니다.</motion.p>
           <div className="hero-chips"><span className="eyebrow">공개 자료만 사용</span><span className="eyebrow">4인 1조</span><span className="eyebrow">주 3시간</span></div>
           <motion.a className="red-button" href={APPLY_FORM_URL} target="_blank" rel="noopener noreferrer" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .4, duration: .7 }}>지원하기 <ArrowUpRight size={16} /></motion.a>
           <p className="eyebrow hero-recruitment-note">2026.11.16 – 11.30 모집 · 정원 4명 · 12.1 출범</p>
@@ -96,7 +96,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="process" className="process content-section section-grid"><div className="section-heading"><p className="eyebrow">02 / THE METHOD</p><h2>네 명의 시선으로<br /><em>하나의 사건을 봅니다.</em></h2><p className="section-intro">감정이 아닌 기록으로, 추측이 아닌 검증으로. 팀 단위 OSINT 수사가 작동하는 방식입니다.</p><p className="section-intro">OSINT(공개출처정보)는 누구나 합법적으로 접근할 수 있는 자료만 사용하는 조사 방식입니다. 우리는 공개 자료만 사용하고, 누구와도 직접 접촉하지 않으며, 당분간 온라인으로만 활동합니다.</p></div><div className="process-list">{processSteps.map(({ number, title, body, icon: Icon }, i) => <motion.article key={number} className="process-step" initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * .12 }}><div className="step-number">{number}</div><div className="step-icon"><Icon /></div><div><h3>{title}</h3><p>{body}</p></div></motion.article>)}</div></section>
+      <section id="process" className="process content-section section-grid"><div className="section-heading"><p className="eyebrow">02 / THE METHOD</p><h2>네 명의 시선으로<br /><em>하나의 사건을 봅니다.</em></h2><p className="section-intro">감정이 아닌 기록으로, 추측이 아닌 검증으로. 팀 단위 OSINT 수사가 작동하는 방식입니다.</p><p className="section-intro">OSINT(공개출처정보)는 누구나 합법적으로 접근할 수 있는 자료만 사용하는 조사 방식입니다. 우리는 공개 자료만 사용하고 당분간은 온라인으로만 활동합니다.</p></div><div className="process-list">{processSteps.map(({ number, title, body, icon: Icon }, i) => <motion.article key={number} className="process-step" initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * .12 }}><div className="step-number">{number}</div><div className="step-icon"><Icon /></div><div><h3>{title}</h3><p>{body}</p></div></motion.article>)}</div></section>
 
       <section id="principles" className="principles content-section">
         <div className="section-heading"><p className="eyebrow">03 / OPERATING PRINCIPLES</p><p className="section-intro principles-intro">이렇게 활동하기에, 두 가지 원칙은 타협하지 않습니다.</p><h2>두 가지 원칙은<br /><em>타협하지 않습니다.</em></h2></div>
