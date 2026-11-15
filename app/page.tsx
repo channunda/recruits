@@ -114,7 +114,7 @@ export default function Page() {
         <div>
           <div className="schedule-grid operating-mode-grid"><div><Timer /><span className="eyebrow">활동 시간</span><strong>주 3시간 내외</strong><p>온라인 자율 및 팀별 협의</p></div><div><Users /><span className="eyebrow">운영 방식</span><strong>창립 멤버 단계</strong><p>수사단 구성원과 함께 세부 운영 규칙 및 첫 사건 선정을 정립합니다. 첫 한 달은 연습 사건으로 호흡을 맞춥니다.</p></div><div><span className="eyebrow">출범</span><strong>2026년 12월 1일(화)</strong></div></div>
           <p className="eyebrow plan-subheading">12월 활동 계획 (예시)</p>
-          <div className="schedule-grid">
+          <div className="schedule-grid plan-grid">
             <div><span className="eyebrow">12월 1주차 (12/1 – 12/6)</span><strong>킥오프</strong><p>원칙과 윤리 서약을 함께 읽고, 역할을 정하고, 연습 사건을 고릅니다.</p></div>
             <div><span className="eyebrow">12월 2주차 (12/7 – 12/13)</span><strong>자료 수집</strong><p>같은 사건의 공개 자료를 각자 모아 비교하고, 출처 기록 방식을 맞춥니다.</p></div>
             <div><span className="eyebrow">12월 3주차 (12/14 – 12/20)</span><strong>정리·분석</strong><p>타임라인을 만들고 사실과 추정을 구분합니다.</p></div>
